@@ -114,6 +114,7 @@ header{
     display: block;
     background-color: var(--second-color);
     color: var(--letter-color);
+    margin-bottom: 50px;
     padding: .8rem 1rem .8rem 1rem;
     border: none;
     border-radius: 5px;
@@ -130,8 +131,11 @@ section.menu{
 }
 
 .menu__container{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+/*     display: grid;
+    grid-template-columns: 1fr 3fr; */
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     height: 4rem;
 }
 
@@ -154,6 +158,10 @@ section.menu{
 
 /*Sección Title*/
 
+.title{
+    margin: 20px auto;
+}
+
 .title__div{
     margin: auto;
     display: grid;
@@ -173,7 +181,7 @@ section.menu{
 }
 
 .title__network__item{
-    margin: 20px;
+    margin: 5px 10px;
     font-size: 1.25rem;
 }
 
@@ -479,17 +487,17 @@ section.academic{
     21%{background-image: url('../assets/escuchadle-2.png')}
     31%{background-image: url('../assets/escuchadle-2.png')}
     36%{background-image: var(--img-bg-pink)}
-    39%{background-image: url('../assets/escuchadle-3.png')}
-    49%{background-image: url('../assets/escuchadle-3.png')}
+    39%{background-image: url('../assets/escuchadle-4.png')}
+    49%{background-image: url('../assets/escuchadle-4.png')}
     54%{background-image: var(--img-bg-pink)}
-    57%{background-image: url('../assets/escuchadle-4.png')}
-    67%{background-image: url('../assets/escuchadle-4.png')}
+    57%{background-image: url('../assets/escuchadle-5.png')}
+    67%{background-image: url('../assets/escuchadle-5.png')}
     72%{background-image: var(--img-bg-pink)}
-    75%{background-image: url('../assets/escuchadle-5.png')}
-    85%{background-image: url('../assets/escuchadle-5.png')}
+    75%{background-image: url('../assets/escuchadle-6.png')}
+    85%{background-image: url('../assets/escuchadle-6.png')}
     90%{background-image: var(--img-bg-pink)}
-    93%{background-image: url('../assets/escuchadle-6.png')}
-    100%{background-image: url('../assets/escuchadle-6.png')}
+    93%{background-image: url('../assets/escuchadle-7.png')}
+    100%{background-image: url('../assets/escuchadle-7.png')}
 }
 
 #app-1{
@@ -615,14 +623,13 @@ section.footer{
 
 .footer__container ul li a i{
     font-size: 1rem;
+    color: var(--second-color);
 }
 
 .footer__container p{
     margin-top: 10px;
+    text-align: center;
 }
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
 
 /*Tablet*/
 @media (min-width: 768px) {
@@ -642,71 +649,125 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (max-width: 800px) {
+@media (max-width: 907px) {
+    h1{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+    h2{
+        font-size: 1.5rem;
+        margin: 5px 0 5px 0;
+    }
+    h3{
+        font-size: 1.2rem;
+        margin: 15px 0 5px 0;
+    }
+    h4{
+        font-size: 1rem;
+        font-weight: 500;
+        margin: 5px 0 5px 0;
+    }
+    .little-font{
+        font-size: var(--little-font);
+    }
+    .normal-font{
+        font-size: var(--normal-font);
+    }
+    .medium-font{
+        font-size: var(--medium-font);
+    }
 
-/*Menu*/
-.menu__container{
-    grid-template-columns: 1fr;
-}
-.menu__nav{
-    display: none;
-}
+    .divider{
+        margin-bottom: 10px;
+    }
 
-/*Titulo*/
-.title__div{
-    grid-template-columns: 1fr;
-}
+    /*Menu*/
+    .menu__container{
+        grid-template-columns: 1fr;
+    }
+    .menu__nav{
+        display: none;
+    }
 
-.title__lottie-man{
-    width: 300px !important;
-    height: 300px !important;
-}
+    /*Titulo*/
+    .title__div{
+        grid-template-columns: 1fr;
+    }
 
-/*About*/
-.about__column{
-    grid-template-columns: 1fr;
-    margin-top: 0px;
-}
+    .title__name, .title__rol, .title__description{
+        text-align: center;
+    }
 
-.blob{
-    margin: 20px auto 20px auto;
-}
-/*Skills*/
+    .title__network{
+        justify-content: center;
+    }
 
-.skills__column{
-    grid-template-columns: 1fr;
-}
+    .title__lottie-man{
+        width: 300px !important;
+        height: 300px !important;
+    }
 
-.skill-box{
-    width: 4rem;
-    height: 4rem;
-    margin: 10px;
-}
+    .title_mouse{
+        justify-content: center;
+    }
 
-.skill-icon{
-    font-size: 2rem;
-}
+    /*About*/
+    .about__column{
+        grid-template-columns: 1fr;
+        margin-top: 0px;
+    }
 
-/*Hobbies*/
- 
-/*Formación Académica*/
-.academic__courses__item__img img{
-    width: 300px;
-}
-/*Experiencia Profesional*/
-.experience__img{
-    width: 300px;
-}
+    .blob{
+        margin: 20px auto 20px auto;
+    }
 
-.experience__app__img{
-    width: 300px;
-    height: 350px;
-}
+    .about__text{
+        text-align: center;
+    }
+    /*Skills*/
 
-/*Contacto*/
-.formcontato__input{
-    width: 90%;
-}
-/*Footer*/
+    .skills__column{
+        grid-template-columns: 1fr;
+    }
 
+    .skill-box{
+        width: 4rem;
+        height: 4rem;
+        margin: 10px;
+    }
+
+    .skill-icon{
+        font-size: 2rem;
+    }
+    
+    /*Formación Académica*/
+    .academic__courses__item__img img{
+        width: 300px;
+    }
+
+    .academic__courses{
+        text-align: center;
+    }
+
+    /*Experiencia Profesional*/
+
+    .experience__websites{
+        text-align: center;
+    }
+
+    .experience__img{
+        width: 300px;
+    }
+
+    .experience__app__img{
+        width: 300px;
+        height: 350px;
+    }
+
+    /*Contacto*/
+    .formcontato__input{
+        width: 90%;
+    }
+
+    /*Footer*/
 }
