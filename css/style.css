@@ -55,6 +55,13 @@ h4{
 .medium-font{
     font-size: var(--medium-font);
 }
+.field_ok{
+    background-color: white
+}
+.field_wrong{
+    background-color: rgba(255, 0, 0, 0.25);
+    color: rgb(125, 0, 0);
+}
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
 
@@ -118,6 +125,7 @@ header{
     padding: .8rem 1rem .8rem 1rem;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button-icon{
@@ -585,25 +593,35 @@ section.formcontato{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    gap: 25px;
-    margin: 25px 0 25px 0;
+    margin-top: 25px;
+}
+
+.formcontato__label{
+    width: 100%;
+    max-width: 750px;
+    margin-bottom: 25px;
+    padding: .5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00000025;
 }
 
 .formcontato__input{
-    width: 100%;
-    max-width: 750px;
-    padding: 1rem;
-    border-radius: 5px;
+    background: none;
     border: none;
     resize: none;
-    box-shadow: 0 0 10px #00000025;
     outline: none;
+    width: 100%;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
-.formcontato__input::placeholder{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    color: #999;
+.formcontato__error-message{
+    font-size: .9rem;
+}
+
+#submit_button:disabled{
+    cursor: not-allowed;
 }
 
 /*footeer*/

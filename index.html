@@ -320,11 +320,33 @@
             <h2 class="formcontato__subtext">¿Qué tal si trabajamos juntos?</h2>
             <h3 class="formcontato__subtext">Completá el siguiente formulario para ponernos en contacto</h3>
             <form class="formcontato__form" name="form">
-                <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
-                <input class="formcontato__input" type="email" name="email" placeholder="E-mail">
-                <input class="formcontato__input" type="text" name="asunto" placeholder="Asunto">
-                <textarea class="formcontato__input" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
-                <button type="submit" class="formcontato__button button">Enviar mensaje <i class="bi bi-send button-icon"></i></button>
+
+                <label id="name-label" class="formcontato__label field_ok" for="name">
+                    <p class="formcontato__description">Nombre:</p>
+                    <input class="formcontato__input" id="name" type="text" name="name" autocomplete="off" data-valid="false">
+                    <p id="name-error" class="formcontato__error-message"></p>
+                </label>
+
+                <label id="email-label" class="formcontato__label field_ok" for="email">
+                    <p class="formcontato__description">Email:</p>
+                    <input class="formcontato__input" id="email" type="email" name="email" autocomplete="off" data-valid="false">
+                    <p id="email-error" class="formcontato__error-message"></p>
+                </label>
+
+                <label id="subject-label" class="formcontato__label field_ok" for="subject">
+                    <p class="formcontato__description">Asunto:</p>
+                    <input class="formcontato__input" id="subject" type="text" name="subject" autocomplete="off" data-valid="false">
+                    <p id="subject-error" class="formcontato__error-message"></p>
+                </label>
+
+                <label id="message-label" class="formcontato__label field_ok" for="message">
+                    <p class="formcontato__description">Mensaje:</p>
+                    <textarea class="formcontato__input" rows="5" cols="40" id="message" name="message" autocomplete="off" data-valid="false"></textarea>
+                    <p id="message-error" class="formcontato__error-message little-font"></p>
+                </label>
+
+                <button type="submit" id="submit_button" class="formcontato__button button" disabled>Enviar mensaje <i class="bi bi-send button-icon"></i></button>
+
             </form>
         </div>
     </section>
@@ -348,6 +370,6 @@
 
  <!-- Script del documento JavaScript -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<script src="validacion.js"></script>
+<script src="./js/form-validations.js"></script>
 </body>
 </html>
