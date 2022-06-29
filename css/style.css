@@ -63,18 +63,6 @@ h4{
     color: rgb(125, 0, 0);
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
 .container{
     width: 90%;
     max-width: 1200px;
@@ -135,23 +123,36 @@ header{
 /*Sección Menú*/
 
 section.menu{
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #00000080;
+    background-color: var(--bg-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .menu__container{
-/*     display: grid;
-    grid-template-columns: 1fr 3fr; */
     display: flex;
     flex-flow: row;
     justify-content: space-between;
     height: 4rem;
 }
 
-.menu__header, .menu__nav, .menu__list, .menu__theme{
+.menu__header, .menu__nav, .menu__list, .menu__theme, .menu__burguer{
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
+}
+
+.menu__burguer{
+    display: none;
+}
+
+.menu__icon-burguer, .menu__icon-x{
+    font-size: 2rem;
+    color: var(--letter-color) !important;
+    z-index: 100;
 }
 
 .menu__list__item{
@@ -167,7 +168,7 @@ section.menu{
 /*Sección Title*/
 
 .title{
-    margin: 20px auto;
+    margin: 3rem auto;
 }
 
 .title__div{
@@ -678,7 +679,7 @@ section.footer{
     }
     h3{
         font-size: 1.2rem;
-        margin: 15px 0 5px 0;
+        margin: 5px 0 5px 0;
     }
     h4{
         font-size: 1rem;
@@ -703,7 +704,31 @@ section.footer{
     .menu__container{
         grid-template-columns: 1fr;
     }
+
     .menu__nav{
+        position: fixed;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        background: linear-gradient(22.5deg, var(--third-color) 0%, var(--second-color) 100%);
+        transform: translateX(100%);
+        transition: .2s;
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+        box-shadow: 0 0 20px #00000080;
+    }
+
+    .menu__list{
+        flex-flow: column;
+    }
+
+    .menu__burguer{
+        display: flex;
+    }
+
+    .menu_hidden{
         display: none;
     }
 
@@ -712,6 +737,9 @@ section.footer{
         grid-template-columns: 1fr;
     }
 
+    .title{
+        margin-top: 6rem;
+    }
     .title__name, .title__rol, .title__description{
         text-align: center;
     }
@@ -720,7 +748,15 @@ section.footer{
         justify-content: center;
     }
 
+    .title__lottie{
+        position: relative;
+        width: 300px !important;
+        height: 250px !important;
+    }
+
     .title__lottie-man{
+        position: absolute;
+        top: -50px;
         width: 300px !important;
         height: 300px !important;
     }

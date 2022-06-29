@@ -1,6 +1,4 @@
 // pendientes
-// fijar nav
-// colapsar nav
 // escribir nombre
 // animaciones
 // hovers
