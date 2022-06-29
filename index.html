@@ -26,7 +26,7 @@
             </div>
             <nav class="menu__nav">
                 <ul class="menu__list">
-                    <li class="menu__list__item"><a href="#sobre-mi">INICIO</a></li>
+                    <li class="menu__list__item"><a href="#inicio">INICIO</a></li>
                     <li class="menu__list__item"><a href="#sobre-mi">SOBRE MI</a></li>
                     <li class="menu__list__item"><a href="#skills">HABILIDADES</a></li>
                     <li class="menu__list__item"><a href="#formacion">FORMACIÓN</a></li>
@@ -38,7 +38,7 @@
     </section>
 
     <!-- Sección del Header/Title/Hero -->
-    <section class="title container">
+    <section class="title container" id="inicio">
         <div class="title__div">
             <div class="title__container">
                 <h3 class="title__hello">¡Hola! 👋 mi nombre es ...</h3>
@@ -47,21 +47,22 @@
                 <h2 class="title__rol"> < Fullstack web developer /></h2>
                 <p class="title__description medium-font">Diseño y desarrollo profesionales y atractivas páginas web, tiendas online con carrito de compras, aplicaciones, etc.</p>
                 <ul class="title__network">
-                    <li class="title__network__item"><a href=""><i class="bi bi-github"></i> </a></li>
-                    <li class="title__network__item"><a href=""><i class="bi bi-linkedin"></i></a></li>
-                    <li class="title__network__item"><a href=""><i class="bi bi-instagram"></i></a></li>
-                    <li class="title__network__item"><a href=""><i class="bi bi-twitter"></i></a></li>
+                    <li class="title__network__item"><a href="https://github.com/gonadr09" target="_blank"><i class="bi bi-github"></i> </a></li>
+                    <li class="title__network__item"><a href="https://www.linkedin.com/in/gonzalo-d%C3%ADaz-rusconi/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li class="title__network__item"><a href="https://www.instagram.com/gonaa09/?hl=es-la" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li class="title__network__item"><a href="https://twitter.com/diaz_rusconi" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                    <li class="title__network__item"><a href="mailto:gonzalo.diazrusconi@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></li>
                 </ul>
             </div>
             <div class="title__lottie">
-                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_le0m7wa9.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop autoplay></lottie-player>
+                <lottie-player class="title__lottie-man" src="https://assets2.lottiefiles.com/packages/lf20_le0m7wa9.json"  background="transparent"  speed="1"  style="width: 500px; height: 500px;"  loop autoplay></lottie-player>
             </div>
         </div>
-        <div class="title_mouse">
+        <a class="title_mouse" href="#sobre-mi">
             <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_onc0p4sf.json"  background="transparent"  speed="1"  style="width: 35px; height: 35px;"  loop autoplay></lottie-player>
             <h4>Conocer más</h4>
             <i class="bi bi-chevron-down"></i>
-        </div>
+        </a>
     </section>
 
     <div class="spacer space-bottom"></div>
@@ -78,8 +79,8 @@
                     <p class="medium-font">Tengo el privilegio de haber trabajado varios años para diferentes áreas del negocio, con lo cual desarrollé la capacidad de entender los requerimientos de los clientes y plasmarlos en los proyectos acompañándolos de las últimas tendencias.</p><br>
                     <p class="medium-font">He trabajado en varios proyectos relacionados al desarrollo del front-end, el back-end, landing pages, e-commerce, email design y demás que se pueden encontrar en el portfolio.</p><br>
                     <p class="medium-font">Puedo ayudar con las mejores sugerencias e ideas posibles que he ido ganando en mi experiencia en el mundo IT.</p><br>
-                    <p class="medium-font">¿Qué te parece si trabajamos juntos? 💪</p><br><br>
-                    <a class="about__button button" href="#contact">Contactame <i class="bi bi-send button-icon"></i></a>
+                    <p class="medium-font">¿Qué tal si trabajemos juntos? 💪</p><br><br>
+                    <a class="about__button button" href="#contacto">Contactame <i class="bi bi-send button-icon"></i></a>
                 </div>
             </div>
             <div class="about__features"></div>
@@ -316,7 +317,7 @@
     <section class="formcontato container" id="contacto">
         <div  class="formcontato__contacto">
             <h4 class="formcontato__title">Contacto</h4>
-            <h2 class="formcontato__subtext">¿Te gustaría trabajar conmigo?</h2>
+            <h2 class="formcontato__subtext">¿Qué tal si trabajemos juntos?</h2>
             <h3 class="formcontato__subtext">Completá el siguiente formulario para ponernos en contacto</h3>
             <form class="formcontato__form" name="form">
                 <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre">
@@ -330,14 +331,20 @@
 
     <div class="spacer space-bottom"></div>
 
-        <!-- Sección de Footer -->
-        <section class="footer">
-            <div class="footer__rodape">
-                <p>Desarrollado por GDR | Dev. 💻</p>
-                <p>2022</p>
-            </div>
-        </section>
-    </div>
+    <!-- Sección de Footer -->
+    <section class="footer">
+        <div class="footer__container container">
+            <ul class="title__network">
+                <li class="title__network__item"><a href="https://github.com/gonadr09" target="_blank"><i class="bi bi-github"></i> </a></li>
+                <li class="title__network__item"><a href="https://www.linkedin.com/in/gonzalo-d%C3%ADaz-rusconi/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                <li class="title__network__item"><a href="https://www.instagram.com/gonaa09/?hl=es-la" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                <li class="title__network__item"><a href="https://twitter.com/diaz_rusconi" target="_blank"><i class="bi bi-twitter"></i></a></li>
+                <li class="title__network__item"><a href="mailto:gonzalo.diazrusconi@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></li>
+            </ul>
+            <p>Copyright © 2022 - Developed by GDR | Dev.</p>
+        </div>
+    </section>
+
  <!-- Script del documento JavaScript -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="validacion.js"></script>

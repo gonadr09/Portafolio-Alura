@@ -14,7 +14,8 @@
    --little-font: 0.8rem;
    --time: 75s;
    --img-bg-blue: url('../assets/bg-blue.png');
-   --img-bg-pink: url('../assets/bg-pink.png')
+   --img-bg-pink: url('../assets/bg-pink.png');
+   scroll-behavior: smooth;
 }
 
 body {
@@ -597,18 +598,31 @@ section.formcontato{
     color: #999;
 }
 
-
-
-
 /*footeer*/
 
 section.footer{
    background-color: var(--bg-color-2);
 }
 
+.footer__container{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--letter-color-2);
+    padding-bottom: 25px;
+}
+
+.footer__container ul li a i{
+    font-size: 1rem;
+}
+
+.footer__container p{
+    margin-top: 10px;
+}
+
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
-
 
 /*Tablet*/
 @media (min-width: 768px) {
@@ -628,24 +642,71 @@ Utiliza las referencias de los breakpoints @media abajo */
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 800px) {
 
 /*Menu*/
+.menu__container{
+    grid-template-columns: 1fr;
+}
+.menu__nav{
+    display: none;
+}
 
 /*Titulo*/
+.title__div{
+    grid-template-columns: 1fr;
+}
 
-/*Sección sobre mi*/
+.title__lottie-man{
+    width: 300px !important;
+    height: 300px !important;
+}
 
+/*About*/
+.about__column{
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+}
+
+.blob{
+    margin: 20px auto 20px auto;
+}
 /*Skills*/
+
+.skills__column{
+    grid-template-columns: 1fr;
+}
+
+.skill-box{
+    width: 4rem;
+    height: 4rem;
+    margin: 10px;
+}
+
+.skill-icon{
+    font-size: 2rem;
+}
 
 /*Hobbies*/
  
 /*Formación Académica*/
-
+.academic__courses__item__img img{
+    width: 300px;
+}
 /*Experiencia Profesional*/
+.experience__img{
+    width: 300px;
+}
 
- /*Contacto*/
+.experience__app__img{
+    width: 300px;
+    height: 350px;
+}
 
+/*Contacto*/
+.formcontato__input{
+    width: 90%;
+}
 /*Footer*/
 
 }
