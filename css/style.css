@@ -1,0 +1,651 @@
+:root{
+   --bg-color: #F5F5FE;
+   --bg-color-2: #48466D;
+   --main-color: #46CDCF; /* 009d90 3D84A8 */
+   --second-color: #ABEDD8;
+   --third-color: #3D84A8;
+   --letter-color: #48466D;
+   --letter-color-2: #F5F5F5;
+   --font-h1: 2rem;
+   --font-h2: 1.5rem;
+   --font-h3: 1.25rem;
+   --medium-font: 1.25rem;
+   --normal-font: 1rem;
+   --little-font: 0.8rem;
+   --time: 75s;
+   --img-bg-blue: url('../assets/bg-blue.png');
+   --img-bg-pink: url('../assets/bg-pink.png')
+}
+
+body {
+    background-color: var(--bg-color) ;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: var(--letter-color);
+    font-size: 1rem;
+}
+
+a{
+    color: var(--letter-color);
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+h2{
+    font-size: 2rem;
+    margin: 5px 0 5px 0;
+}
+h3{
+    font-size: 1.5rem;
+    margin: 5px 0 5px 0;
+}
+h4{
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0 5px 0;
+}
+.little-font{
+    font-size: var(--little-font);
+}
+.normal-font{
+    font-size: var(--normal-font);
+}
+.medium-font{
+    font-size: var(--medium-font);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-vw100{
+    width: 100vw;
+}
+
+header{
+    height: 100vh;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+.divider{
+    width: 50px;
+    margin: 15px 0 30px 0;
+}
+
+.curves.div{
+    position: relative;
+}
+
+.curves-svg{
+    position: absolute;
+}
+
+.spacer{
+    aspect-ratio: 900/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.space-top{
+    background-image: url('../assets/space-top.svg');
+}
+.space-bottom{
+    background-image: url('../assets/space-bottom.svg');
+}
+
+.button{
+    display: block;
+    background-color: var(--second-color);
+    color: var(--letter-color);
+    padding: .8rem 1rem .8rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.button-icon{
+    color: var(--letter-color) !important;
+}
+
+/*Sección Menú*/
+
+section.menu{
+    box-shadow: 0 0 10px #ccc;
+}
+
+.menu__container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 4rem;
+}
+
+.menu__header, .menu__nav, .menu__list, .menu__theme{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu__list__item{
+    margin: 15px;
+    font-weight: 500;
+}
+
+.menu__title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/*Sección Title*/
+
+.title__div{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.title__description{
+    margin: 15px 0 15px 0;
+}
+
+.title__network{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.title__network__item{
+    margin: 20px;
+    font-size: 1.25rem;
+}
+
+.bi{
+    color: var(--main-color);
+}
+
+.title__lottie{
+    margin: auto;
+}
+
+.title_mouse{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 10px;
+    animation: floating 1.5s infinite ease-in-out alternate-reverse;
+    transform: tra;
+}
+
+@keyframes floating {
+    from{transform: translateY(0px);}
+    to{transform: translateY(10px);}
+}
+
+/*Sección About*/
+
+section.about{
+    background-color: var(--bg-color-2);
+    color: var(--letter-color-2);
+}
+
+.about__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color); 
+}
+
+.about__column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+
+.blob{
+    margin: auto;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%;
+    background-size: 500% 400%;
+    box-shadow: 0 0 1px #000;
+    animation:
+        blobber var(--time) 0s linear infinite,
+        cobler var(--time) 0s linear infinite alternate;
+}
+
+.blob::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("../assets/gonzalo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation:
+        blobber var(--time) 0s ease-in-out infinite,
+        wobbler 15s 0s linear infinite alternate;
+}
+
+@keyframes blobber {
+    0%  { border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+    5%  { border-radius: 48% 52% 41% 59% / 66% 37% 63% 34%; }
+    10% { border-radius: 69% 31% 71% 29% / 67% 31% 69% 33%; }
+    15% { border-radius: 60% 40% 71% 29% / 63% 65% 35% 37%; }
+    20% { border-radius: 61% 39% 51% 49% / 57% 58% 42% 43%; }
+    25% { border-radius: 66% 34% 25% 75% / 47% 30% 70% 53%; }
+    30% { border-radius: 32% 68% 38% 62% / 65% 60% 40% 35%; }
+    35% { border-radius: 63% 37% 41% 59% / 35% 38% 62% 65%; }
+    40% { border-radius: 57% 43% 49% 51% / 55% 71% 29% 45%; }
+    45% { border-radius: 47% 53% 34% 66% / 65% 36% 64% 35%; }
+    50% { border-radius: 44% 56% 32% 68% / 69% 26% 74% 31%; }
+    55% { border-radius: 28% 72% 37% 63% / 71% 44% 56% 29%; }    
+    60% { border-radius: 38% 62% 35% 65% / 74% 53% 47% 26%; }
+    65% { border-radius: 73% 27% 46% 54% / 54% 47% 53% 46%; }
+    70% { border-radius: 75% 25% 47% 53% / 49% 53% 47% 51%; }
+    75% { border-radius: 62% 38% 43% 57% / 55% 60% 40% 45%; }
+    80% { border-radius: 41% 59% 65% 35% / 73% 50% 50% 27%; }
+    85% { border-radius: 55% 45% 57% 43% / 73% 61% 39% 27%; }
+    90% { border-radius: 74% 26% 33% 67% / 40% 65% 35% 60%; }
+    95% { border-radius: 58% 42% 57% 43% / 53% 45% 55% 47%; }
+    100%{ border-radius: 48% 52% 68% 32% / 42% 28% 72% 58%; }
+}
+
+@keyframes cobler {
+	0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@keyframes wobbler {
+    0%  {
+        transform: rotateZ(4deg);
+    }
+    100% {
+        transform: rotateZ(-1deg);
+    }
+}
+
+.about__button{
+    display: inline-block;
+}
+
+.about__features{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Sección Skill*/
+
+.skills__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color); 
+}
+
+.skills__column{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+ .skills-subtitle{
+    text-align: center;
+    margin-bottom: 20px;
+ }
+
+ .skills-cards{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: center;
+ }
+ .skill-box{
+    width: 6.3rem;
+    height: 6.3rem;
+    margin:1px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    border-radius: .2rem;
+ }
+ .skill-icon{
+    font-size: 3rem;
+    color:var(--third-color);
+ }
+ .skill-text{
+    font-size: var(--little-font);
+    text-align: center;
+    margin-top: .5rem;
+    color: var(--third-color);
+    text-transform: uppercase;
+ }
+
+/* Experiencia Académica*/
+
+section.academic{
+    background-color: var(--bg-color-2);
+    color: var(--letter-color-2);
+}
+.academic__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 50px 0 25px;
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+}
+
+.academic__courses{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 20px
+}
+
+.academic__courses__item__img{
+    margin: 5px 0 5px;
+}
+
+.academic__courses__item__subtitle{
+    color: var(--second-color);
+}
+
+
+/* portfolio website */
+
+.experience__section__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 50px 0 25px;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.experience__websites{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.experience__text{
+    color: var(--main-color);
+}
+
+#wordpress-1{
+    background-image: url('../assets/wordpress-1.png');
+}
+#wordpress-2{
+    background-image: url('../assets/wordpress-2.png');
+}
+
+.experience__img{
+    width: 400px;
+    height: 600px;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0 0 20px #00000080;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+}
+
+.experience__img:hover{
+    animation: scroll-down-img 5s both;
+}
+
+@keyframes scroll-down-img {
+    from{background-position:inherit}
+    to{background-position: bottom;}
+}
+
+.experience__description{
+    display: block
+}
+
+/* portfolio app */
+
+.experience__app{
+    background-color: var(--bg-color-2);
+    color: var(--letter-color-2);
+    padding-bottom: 50px;
+}
+
+.experience__section__app__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 50px 0 25px;
+    color: var(--second-color);
+    border-bottom: 1px solid var(--second-color);
+}
+
+.experience__app__text{
+    color: var(--main-color)
+}
+
+.experience__app__img{
+    width: 350px;
+    height: 400px;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0 0 20px #00000080;
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+}
+
+#app-0{
+    background-image: var(--img-bg-pink);
+    animation: change-img-0 26s infinite linear;
+}
+
+@keyframes change-img-0 {
+    0%{background-image: var(--img-bg-pink)}
+    3%{background-image: url('../assets/escuchadle-1.png')}
+    13%{background-image: url('../assets/escuchadle-1.png')}
+    18%{background-image: var(--img-bg-pink)}
+    21%{background-image: url('../assets/escuchadle-2.png')}
+    31%{background-image: url('../assets/escuchadle-2.png')}
+    36%{background-image: var(--img-bg-pink)}
+    39%{background-image: url('../assets/escuchadle-3.png')}
+    49%{background-image: url('../assets/escuchadle-3.png')}
+    54%{background-image: var(--img-bg-pink)}
+    57%{background-image: url('../assets/escuchadle-4.png')}
+    67%{background-image: url('../assets/escuchadle-4.png')}
+    72%{background-image: var(--img-bg-pink)}
+    75%{background-image: url('../assets/escuchadle-5.png')}
+    85%{background-image: url('../assets/escuchadle-5.png')}
+    90%{background-image: var(--img-bg-pink)}
+    93%{background-image: url('../assets/escuchadle-6.png')}
+    100%{background-image: url('../assets/escuchadle-6.png')}
+}
+
+#app-1{
+    /* background-image: var(--img-bg-blue); */
+    background-image: url('../assets/encriptador-1.png');
+    animation: change-img 26s infinite linear;
+}
+
+@keyframes change-img-1 {
+    0%{background-image: var(--img-bg-blue)}
+    3%{background-image: url('../assets/encriptador-1.png')}
+    13%{background-image: url('../assets/encriptador-1.png')}
+    18%{background-image: var(--img-bg-blue)}
+    21%{background-image: url('../assets/encriptador-2.png')}
+    31%{background-image: url('../assets/encriptador-2.png')}
+    36%{background-image: var(--img-bg-blue)}
+    39%{background-image: url('../assets/encriptador-3.png')}
+    49%{background-image: url('../assets/encriptador-3.png')}
+    54%{background-image: var(--img-bg-blue)}
+    57%{background-image: url('../assets/encriptador-1.png')}
+    67%{background-image: url('../assets/encriptador-1.png')}
+    72%{background-image: var(--img-bg-blue)}
+    75%{background-image: url('../assets/encriptador-2.png')}
+    85%{background-image: url('../assets/encriptador-2.png')}
+    90%{background-image: var(--img-bg-blue)}
+    93%{background-image: url('../assets/encriptador-3.png')}
+    100%{background-image: url('../assets/encriptador-3.png')}
+}
+
+#app-2{
+    background-image: var(--img-bg-blue);
+    animation: change-img-2 26s infinite linear;
+}
+
+@keyframes change-img-2 {
+    0%{background-image: var(--img-bg-blue)}
+    3%{background-image: url('../assets/ahorcado-2.png')}
+    13%{background-image: url('../assets/ahorcado-2.png')}
+    18%{background-image: var(--img-bg-blue)}
+    21%{background-image: url('../assets/ahorcado-3.png')}
+    31%{background-image: url('../assets/ahorcado-3.png')}
+    36%{background-image: var(--img-bg-blue)}
+    39%{background-image: url('../assets/ahorcado-4.png')}
+    49%{background-image: url('../assets/ahorcado-4.png')}
+    54%{background-image: var(--img-bg-blue)}
+    57%{background-image: url('../assets/ahorcado-5.png')}
+    67%{background-image: url('../assets/ahorcado-5.png')}
+    72%{background-image: var(--img-bg-blue)}
+    75%{background-image: url('../assets/ahorcado-6.png')}
+    85%{background-image: url('../assets/ahorcado-6.png')}
+    90%{background-image: var(--img-bg-blue)}
+    93%{background-image: url('../assets/ahorcado-7.png')}
+    100%{background-image: url('../assets/ahorcado-7.png')}
+}
+
+.experience__app__description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px
+}
+
+.experience__repo, .experience__demo{
+    text-align: center;
+}
+
+/*Contacto*/
+
+section.formcontato{
+    width: 90%;
+}
+
+.formcontato__title{
+    display: inline-block;
+    padding-bottom: 15px;
+    margin: 50px 0 25px;
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.formcontato__subtext{
+    text-align: center;
+}
+
+.formcontato__form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 25px;
+    margin: 25px 0 25px 0;
+}
+
+.formcontato__input{
+    width: 100%;
+    max-width: 750px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    box-shadow: 0 0 10px #00000025;
+    outline: none;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.formcontato__input::placeholder{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #999;
+}
+
+
+
+
+/*footeer*/
+
+section.footer{
+   background-color: var(--bg-color-2);
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+ /*Contacto*/
+
+/*Footer*/
+
+}
