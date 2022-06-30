@@ -1,10 +1,3 @@
-// pendientes
-// escribir nombre
-// animaciones
-// hovers
-// pdf con curriculum
-
-// validación
 const fields_input = document.querySelectorAll(".formcontato__input");
 const submitButton = document.getElementById("submit_button");
 

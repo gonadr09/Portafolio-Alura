@@ -114,6 +114,11 @@ header{
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover{
+    background-color: var(--main-color);
 }
 
 .button-icon{
@@ -160,6 +165,14 @@ section.menu{
     font-weight: 500;
 }
 
+.menu__list__item a:hover{
+    padding: 10px 0;
+    transition: .2s;
+}
+.menu__list__item a:hover{
+    border-bottom: 1px solid #46CDCF;
+}
+
 .menu__title{
     font-size: 1.5rem;
     font-weight: 500;
@@ -196,6 +209,14 @@ section.menu{
 
 .bi{
     color: var(--main-color);
+}
+
+.title__network__item a i:hover{
+    transition: 0.2s;
+}
+.title__network__item a i:hover{
+    transform: scale(1.2);
+    color: #3D84A8;
 }
 
 .title__lottie{
