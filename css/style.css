@@ -29,6 +29,11 @@ a{
     color: var(--letter-color);
 }
 
+video, iframe{
+    width: 560px;
+    height: 315px
+}
+
 h1{
     font-size: 4rem;
     font-weight: 600;
@@ -369,7 +374,7 @@ section.about{
  .skills-cards{
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
+    align-items: center;
     justify-content: center;
  }
  .skill-box{
@@ -409,10 +414,15 @@ section.academic{
 }
 
 .academic__courses{
-    display: flex;
+/*     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    gap: 20px
+    gap: 20px */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .academic__courses__item__img{
@@ -444,11 +454,18 @@ section.academic{
     color: var(--main-color);
 }
 
+
+#wordpress-0{
+    background-image: url('../assets/wordpress-0.png');
+}
 #wordpress-1{
     background-image: url('../assets/wordpress-1.png');
 }
 #wordpress-2{
     background-image: url('../assets/wordpress-2.png');
+}
+#wordpress-3{
+    background-image: url('../assets/wordpress-3.png');
 }
 
 .experience__img{
@@ -583,6 +600,22 @@ section.academic{
     100%{background-image: url('../assets/ahorcado-7.png')}
 }
 
+#app-3{
+    background-image: url('../assets/todoJS.png');
+}
+
+#react-0{
+    background-image: url('../assets/piedra.png');
+}
+
+#react-1{
+    background-image: url('../assets/carrito.png');
+}
+
+#react-2{
+    background-image: url('../assets/todoReact.png');
+}
+
 .experience__app__description{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -690,6 +723,10 @@ section.footer{
 
 /*Mobile*/
 @media (max-width: 907px) {
+    video, iframe{
+        width: 300px;
+        height: 168px
+    }
     h1{
         font-size: 3rem;
         font-weight: 600;
@@ -822,6 +859,7 @@ section.footer{
 
     .academic__courses{
         text-align: center;
+        grid-template-columns: 1fr;
     }
 
     /*Experiencia Profesional*/
