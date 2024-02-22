@@ -39,7 +39,7 @@ h1{
     font-weight: 600;
 }
 h2{
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin: 5px 0 5px 0;
 }
 h3{
@@ -199,6 +199,7 @@ section.menu{
 
 .title__description{
     margin: 15px 0 15px 0;
+    line-height: 25px;
 }
 
 .title__network{
@@ -456,16 +457,16 @@ section.academic{
 
 
 #wordpress-0{
-    background-image: url('../assets/wordpress-0.png');
+    background-image: url('../assets/wordpress-0.webp');
 }
 #wordpress-1{
-    background-image: url('../assets/wordpress-1.png');
+    background-image: url('../assets/wordpress-1.webp');
 }
 #wordpress-2{
-    background-image: url('../assets/wordpress-2.png');
+    background-image: url('../assets/wordpress-2.webp');
 }
 #wordpress-3{
-    background-image: url('../assets/wordpress-3.png');
+    background-image: url('../assets/wordpress-3.webp');
 }
 
 .experience__img{
@@ -732,7 +733,7 @@ section.footer{
         font-weight: 600;
     }
     h2{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         margin: 5px 0 5px 0;
     }
     h3{
@@ -800,6 +801,10 @@ section.footer{
     }
     .title__name, .title__rol, .title__description{
         text-align: center;
+    }
+
+    .title__description{
+        line-height: 25px;
     }
 
     .title__network{
